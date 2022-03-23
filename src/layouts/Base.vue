@@ -3,13 +3,13 @@
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <router-link class="btn btn-primary my-2 my-sm-0" to="/Landing">Home</router-link>
-        <router-link class="navbar-brand" to="/"></router-link>
+        <router-link class="navbar-brand" to="/Landing"></router-link>
         <div class="ml-auto">
           <div v-if="user.photoURL">
             <img
-              :src="user.photoURL"
+              src="public/images/usericon.png"
               class="img-thumbnail profile-image"
-              alt
+              alt=""
             />
             <router-link class="btn btn-primary my-2 my-sm-0" to="/cart">
               <img
@@ -45,12 +45,12 @@ export default {
 
 <style>
 nav {
-  background-color: teal;
+  background-color: crimson;
 }
 .navbar-brand {
   font-weight: bold;
   font-size: 25px;
-  /* font-family: Comic; */
+  font-family: Comic;
   color: #ffffff !important;
 }
 .profile-image {
@@ -58,19 +58,21 @@ nav {
   border-radius: 100% !important;
 }
 .page-container {
-  padding-top: 81px;
+  padding-top: 0px;
 }
 .btn {
+  margin-left: 2px;
   border-radius: 0%;
   font-weight: bold;
-  background: teal;
-  border: teal;
+  background: crimson;
+  border: rgb(214, 57, 89);
+  border-radius: 30% !important;
 }
 .btn:hover {
-  background: #00b4b4;
+  background: rgb(221, 94, 120);
 }
 input {
-  border-radius: 0%;
+  border-radius: 5%;
 }
 .btn:focus {
   background: teal;

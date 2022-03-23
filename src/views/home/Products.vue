@@ -1,4 +1,5 @@
 <template>
+<div class="products">
   <div style="padding: 25px;">
     <div class="container">
       <div class="row">
@@ -8,6 +9,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -28,5 +30,12 @@ export default {
 </script>
 
 <style scoped>
-
+.products {
+  background-color: rgb(0, 0, 0);
+}
+.container {
+  margin-top: 12vh;
+  padding-top: 15px;
+  background-color: white;
+}
 </style>

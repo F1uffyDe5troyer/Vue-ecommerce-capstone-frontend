@@ -29,7 +29,11 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button @click="login()" type="submit" class="btn btn-primary btn-block">signup</button>
-            <button @click="Signin()" type="submit" class="btn btn-primary btn-block">Login</button>
+            <small
+                id="emailHelp"
+                class="form-text text-muted"
+              >Already have an account?</small>
+            <button @click="Signin()" type="submit" class="btn btn-primary btn-block">Login?</button>
           </div>
         </div>
       </div>

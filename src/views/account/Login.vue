@@ -29,7 +29,11 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button @click="login()" type="submit" class="btn btn-primary btn-block">Login</button>
-            <button @click="Signup()" type="submit" class="btn bbtn-primary my-2 my-sm-0" to="/Signup">Signup</button>
+            <small
+                id="emailHelp"
+                class="form-text text-muted"
+              >Don't have an account?</small>
+            <button @click="Signup()" type="submit" class="btn btn-primary btn-block" to="/Signup">Signup?</button>
           </div>
         </div>
       </div>
@@ -50,6 +54,7 @@ export default {
 };
 </script>
 
+
 <style>
 .form-control {
   border-radius: 0%;
@@ -62,13 +67,13 @@ export default {
 .btn {
   border-radius: 0%;
   font-weight: bold;
-  background: teal;
-  border: teal;
+  background: crimson;
+  border: crimson;
 }
 .btn:hover {
   background: #00b4b4;
 }
 .btn:focus {
-  background: teal;
+  background: rgb(228, 79, 109);
 }
 </style>
