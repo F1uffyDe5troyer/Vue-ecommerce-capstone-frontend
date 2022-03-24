@@ -21,6 +21,7 @@
             </router-link>
           </div>
           <router-link v-else class="btn btn-primary my-2 my-sm-0" to="/login">Login</router-link>
+          <router-link class="btn btn-primary my-2 my-sm-0" to="/UserDetails">Profile</router-link>
           <router-link class="btn btn-primary my-2 my-sm-0" to="/About">About</router-link>
           <router-link class="btn btn-primary my-2 my-sm-0" to="/Contact">Contact</router-link>
         </div>

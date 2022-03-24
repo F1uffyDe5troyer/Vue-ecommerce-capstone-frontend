@@ -23,9 +23,12 @@
             <div class="col-md-8">
               <div class="about__text mb-5 mb-sm-4 mb-md-4">
                 <h3></h3>
-                <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nulla
-                  rerum doloribus qui, neque placeat veniam est deserunt eum aperiam quia, ab
-                  fuga sed? Commodi laboriosam nulla hic amet sint.</p>
+                <p class="m-0">Our passion for all things Gaming and need to offer gamers a specialist store has always been our focus. We love gaming and are gamers, and we insist on being knowledgeable and excited about the products we sell. Today we offer a wide range of games, consoles, hardware, accessories and related merchandise, at competitive pricing.
+                </p>
+                <h3>Who are we?</h3>
+                <p>BT Games has been around for many years now and is SA's largest Gaming specialist store.
+                  We have many stores in South Africa, in all the major malls, and this site where you can order your gaming gear. Orders over R2000 to major centres get FREE DELIVERY to your door, or opt to collect from your nearest post office. You can also collect in-store. Payments are made safely online.
+                </p>
               </div>
               <div class="about__skills">
                 <div class="row no-gutters mb-0 mb-sm-4">
