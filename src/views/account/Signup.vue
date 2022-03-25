@@ -49,7 +49,7 @@ export default {
              Signin(){
    this.$router.push('/Login'); 
       },
-    goTOPrevios(){
+    goToPrevious(){
       this.$router.push('/Products')
     }
   },

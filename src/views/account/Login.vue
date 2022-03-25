@@ -8,7 +8,7 @@
             <img src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" width="150" alt="">
           </div>
           <div>
-            <div class="form-group form-validation">
+           <div class="form-group form-validation">
               <label for="exampleInputEmail1">Email address</label>
               <input
                 type="email"
@@ -53,7 +53,10 @@ export default {
     ...mapActions("account", ["login"]),
        Signup(){
    this.$router.push('/Signup'); 
-      }
+      },
+        goToPrevious(){
+      this.$router.push('/Products')
+    }
   },
 };
 </script>
