@@ -18,7 +18,6 @@
 
           <div class="row mb-5">
             <div class="mb-5 mb-sm-4 col-md-4">
-              <img src="https://i.postimg.cc/Dy1QGkX6/winning.webp" alt="Colorful Wall">
             </div>
             <div class="col-md-8">
               <div class="about__text mb-5 mb-sm-4 mb-md-4">
@@ -33,57 +32,11 @@
               <div class="about__skills">
                 <div class="row no-gutters mb-0 mb-sm-4">
                   <div class="mb-4 mb-sm-0 pr-sm-3 col-sm-6">
-                    <div class="media">
-                      <i class="fab fa-js-square icon-18 mr-3"></i>
-                      <div class="media-body">
-                        <h4 class="m-0">Javascript</h4>
-                        <p class="m-0">Quasea minus animi sequi sit nostrum? Lorem ipsum
-                          dolor sit amet
-                          consectetur adipisicing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-4 mb-sm-0 pl-sm-3 col-sm-6 ">
-                    <div class="media">
-                      <i class="fab fa-react icon-18 mr-3"></i>
-                      <div class="media-body">
-                        <h4 class="m-0">React</h4>
-                        <p class="m-0">Ducimus facere vitae sapiente ab sit. Lorem ipsum
-                          dolor sit amet
-                          consectetur adipisicing elit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row no-gutters mb-0 mb-sm-4">
-                  <div class="mb-4 mb-sm-0 pr-sm-3 col-sm-6">
-                    <div class="media">
-                      <i class="fab fa-sass icon-18 mr-2"></i>
-                      <div class="media-body">
-                        <h4 class="m-0">Sass</h4>
-                        <p class="m-0">Eaque voluptatibus dolores. Quod. Lorem dolor sit
-                          amet
-                          consectetur. Minus, asperiores.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-0 pl-sm-3 col-sm-6">
-                    <div class="media">
-                      <i class="fab fa-node-js icon-18 mr-3"></i>
-                      <div class="media-body">
-                        <h4 class="m-0">Node.js</h4>
-                        <p class="m-0">Numquam saepe deserunt obcaecati? Doloribus. Lorem
-                          ipsum dolor
-                          sit amet adipisicing elit.</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-
+          </div>
           <div class="about-data">
             <div class="row no-gutters pt-5 border-top">
               <div class="mb-4 mb-md-0 pr-sm-3 p-md-0 col-sm-6 col-md-3">
@@ -155,10 +108,12 @@ body {
 
 h1 {
   font-weight: 900;
+  margin-left: 22rem;
 }
 
 h2, h3 {
   font-weight: 700;
+  margin-left: 10px;
 }
 
 h4, h5, h6 {
@@ -186,7 +141,7 @@ img {
   height: 100vh;
   width: 100%;
   max-width: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://source.unsplash.com/4kkYkFNfJV8/706x900');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://i.postimg.cc/Dy1QGkX6/winning.webp');
   background-size: cover;
   padding: 4rem;
 }

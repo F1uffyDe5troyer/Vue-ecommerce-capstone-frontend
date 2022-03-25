@@ -1,5 +1,6 @@
 <template>
   <div>
+    <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
     <div class="container" style="padding-top: 10%">
       <div class="row d-flex justify-content-center">
         <div class="col-5 text-left login-form-container">
@@ -7,13 +8,14 @@
             <img src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" width="150" alt="">
           </div>
           <div>
-            <div class="form-group">
+            <div class="form-group form-validation">
               <label for="exampleInputEmail1">Email address</label>
               <input
                 type="email"
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                v-model="email" v-bind:class="{'form-control':true, 'is-invalid' : !validEmail(email) && emailBlured}" v-on:blur="emailBlured = true"
               />
               <small
                 id="emailHelp"
@@ -22,7 +24,9 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" />
+              <input type="password" class="form-control" id="exampleInputPassword1" 
+              autocomplete="off" v-model="password" v-bind:class="{'form-control':true, 'is-invalid' : !validPassword(password) && passwordBlured}" v-on:blur="passwordBlured = true"
+              />
             </div>
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1" />

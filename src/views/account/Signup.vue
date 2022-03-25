@@ -1,5 +1,6 @@
 <template>
   <div>
+  <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
     <div class="container" style="padding-top: 10%">
       <div class="row d-flex justify-content-center">
         <div class="col-5 text-left login-form-container">
@@ -47,7 +48,10 @@ export default {
   methods: {
              Signin(){
    this.$router.push('/Login'); 
-      }
+      },
+    goTOPrevios(){
+      this.$router.push('/Products')
+    }
   },
 };
 </script>
