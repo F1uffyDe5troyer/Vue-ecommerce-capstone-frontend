@@ -15,7 +15,6 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                v-model="email" v-bind:class="{'form-control':true, 'is-invalid' : !validEmail(email) && emailBlured}" v-on:blur="emailBlured = true"
               />
               <small
                 id="emailHelp"
@@ -24,8 +23,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" 
-              autocomplete="off" v-model="password" v-bind:class="{'form-control':true, 'is-invalid' : !validPassword(password) && passwordBlured}" v-on:blur="passwordBlured = true"
+              <input type="password" class="form-control" id="exampleInputPassword1"
               />
             </div>
             <div class="form-group form-check">
