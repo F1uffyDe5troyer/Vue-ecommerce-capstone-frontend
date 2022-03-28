@@ -38,6 +38,10 @@ const routes = [
     path: '/userDetails',
     component: () => import('../views/home/UserDetails.vue')
   },
+  {
+    path: '/landing',
+    component: () => import('../views/home/Landing.vue')
+  }
 ]
 
 const router = new VueRouter({

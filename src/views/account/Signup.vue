@@ -39,12 +39,15 @@
         </div>
       </div>
     </div>
+<Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../../layouts/Footer.vue'
 export default {
   name: "Signup",
+  components: { Footer },
   methods: {
              Signin(){
    this.$router.push('/Login'); 

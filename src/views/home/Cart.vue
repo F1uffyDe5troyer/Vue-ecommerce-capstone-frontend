@@ -79,7 +79,7 @@ export default {
         vm.removeCart();
         alert("Purchase successful!");
         vm.$router.push("/");
-      }, 1000);
+      }, 400);
     },
   },
   mounted() {

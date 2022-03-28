@@ -3,7 +3,6 @@
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <router-link class="btn btn-primary my-2 my-sm-0" to="/Landing">Home</router-link>
-        <router-link class="navbar-brand" to="/Landing"></router-link>
         <div class="ml-auto">
           <div v-if="user.photoURL">
             <img

@@ -71,6 +71,7 @@ export default {
   height: 50px;
 }
 .login-form-container {
+  margin-bottom: 20px;
   padding: 20px;
   box-shadow: 0px 2px 5px 2px #888888;
 }

@@ -27,7 +27,4 @@ export default {
 .card .product-image {
   height: 300px;
 }
-.container {
-  margin-top: 115vh;
-}
 </style>
