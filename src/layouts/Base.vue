@@ -75,6 +75,6 @@ input {
   border-radius: 5%;
 }
 .btn:focus {
-  background: teal;
+  background: rgb(243, 55, 93);
 }
 </style>

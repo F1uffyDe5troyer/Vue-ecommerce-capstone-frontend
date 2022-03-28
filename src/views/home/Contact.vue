@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>
 <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>  
 <body>
   <div class="wrapper">
@@ -23,6 +24,7 @@
     </form>
   </div>
 </body>
+</div>
 <Footer />
   </div>
 </template>
