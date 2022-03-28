@@ -1,6 +1,7 @@
 <template>
   <div>
     <section class="about-section">
+    <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
   <div class="container-fluid p-0">
     <div class="row no-gutters position-relative">
       <div class="left-header d-none d-lg-block col-lg-3 col-xl-4">
@@ -89,10 +90,27 @@
 
 <script>
 export default {
-    name: 'About'
+    name: 'About',
+    methods: {
+    goToPrevious(){
+      this.$router.push('/Products')
+    }
+    }
 }
 </script>
 
-<style>
+<style scoped>
+.btn {
+  border-radius: 0%;
+  font-weight: bold;
+  background: crimson;
+  border: crimson;
+}
+.btn:hover {
+  background: #00b4b4;
+}
+.btn:focus {
+  background: rgb(228, 79, 109);
+}
 
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
 <div id="container">
   
   <div class="sidebar">
@@ -78,7 +79,12 @@
 import Footer from "../../layouts/Footer.vue";
 export default {
     name: "UserDetails",
-    components: { Footer }
+    components: { Footer },
+        methods: {
+    goToPrevious(){
+      this.$router.push('/Products')
+    }
+  }
 }
 </script>
 

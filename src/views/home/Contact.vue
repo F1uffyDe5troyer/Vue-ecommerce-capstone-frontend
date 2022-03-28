@@ -1,5 +1,6 @@
 <template>
   <div>
+<button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>  
 <body>
   <div class="wrapper">
     <h2>CONTACT US</h2>
@@ -30,7 +31,12 @@
 import Footer from "../../layouts/Footer.vue"
 export default {
     name: "Contact",
-    components: { Footer }
+    components: { Footer },
+    methods: {
+    goToPrevious(){
+      this.$router.push('/Products')
+    }
+    }
 }
 </script>
 
@@ -50,7 +56,7 @@ body {
   line-height: 1.5;
   background: white;
   display: flex;
-  height: 100vh;
+  height: 115vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;

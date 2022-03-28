@@ -1,4 +1,5 @@
 <template>
+<div>
   <div>
     <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
     <div class="container" style="padding-top: 10%">
@@ -41,12 +42,16 @@
       </div>
     </div>
   </div>
+<Footer />
+</div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
+import Footer from "../../layouts/Footer.vue"
 export default {
   name: "Login",
+  components: { Footer },
   methods: {
     ...mapActions("account", ["login"]),
        Signup(){

@@ -1,5 +1,6 @@
 <template>
 <div>
+  <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>  
   <div class="container" style="padding: 30px">
     <div class="row d-flex justify-content-center">
       <div class="list-group col-8">
@@ -63,6 +64,9 @@ export default {
     ...mapGetters("account", ["user"]),
   },
   methods: {
+    goToPrevious(){
+      this.$router.push('/Products')
+    },
     ...mapActions("product", ["removeCart"]),
     calcPrice() {
       this.cart.forEach((element) => {
@@ -75,7 +79,7 @@ export default {
         vm.removeCart();
         alert("Purchase successful!");
         vm.$router.push("/");
-      }, 2000);
+      }, 1000);
     },
   },
   mounted() {
@@ -85,5 +89,8 @@ export default {
 </script>
 
 <style scoped>
-
+.container {
+  margin-top: 25vh;
+  height: 70vh;
+}
 </style>

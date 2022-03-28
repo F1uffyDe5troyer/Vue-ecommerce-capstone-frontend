@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <div class="card mb-4 shadow-sm">
     <img :src="product.imageUrl" class="card-img-top product-image" />
     <div class="card-body">
@@ -12,6 +13,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -24,5 +26,8 @@ export default {
 <style>
 .card .product-image {
   height: 300px;
+}
+.container {
+  margin-top: 115vh;
 }
 </style>
