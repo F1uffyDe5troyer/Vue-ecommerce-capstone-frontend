@@ -50,6 +50,7 @@ export default {
 <style scoped>
 .container-fluid {
   padding: 30px;
+  margin-top: 20vh;
 }
 .image-product {
   width: 100%;
