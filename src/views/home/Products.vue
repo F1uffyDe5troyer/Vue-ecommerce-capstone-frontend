@@ -1,4 +1,6 @@
 <template>
+<div>
+  <Base />
 <div class="products">
   <div style="padding: 25px;">
     <div class="container">
@@ -10,16 +12,18 @@
     </div>
   </div>
 </div>
+</div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
 import ProductCard from "../../components/products/ProductCard";
+import Base from "../../layouts/Base.vue";
 export default {
   computed: {
     ...mapGetters("product", ["products"]),
   },
-  components: { ProductCard },
+  components: { ProductCard, Base },
   methods: {
     ...mapActions("product", ["getProducts", "addCart", "removeCart"]),
   },
