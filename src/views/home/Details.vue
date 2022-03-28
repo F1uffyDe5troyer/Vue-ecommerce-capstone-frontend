@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="container-fluid">
     <div class="row d-flex justify-content-center">
       <div class="col-6">
@@ -17,11 +18,14 @@
       </div>
     </div>
   </div>
+  <Footer />
+</div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-import AddToCart from "../../components/details/AddToCart"
+import AddToCart from "../../components/details/AddToCart";
+import Footer from "../../layouts/Footer.vue";
 export default {
   data () {
     return {
@@ -32,7 +36,7 @@ export default {
     ...mapGetters("account", ["user"]),
     ...mapGetters("product", ["product"])
   },
-  components: { AddToCart },
+  components: { AddToCart, Footer },
   methods: {
     ...mapActions("product", ["productDetails"]),
   },

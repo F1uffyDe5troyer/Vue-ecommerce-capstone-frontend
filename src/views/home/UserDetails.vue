@@ -66,18 +66,19 @@
       
       <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-0/c0.45.206.206/p206x206/13631451_1626842660967489_4051031015401882285_n.jpg?oh=2c3d708fc3341c1b83eb26f63608a2eb&oe=58701F7D">
       
-      <p>Ugh celiac iceland yr locavore. Craft beer offal lumbersexual, air plant woke truffaut hammock deep v umami cardigan tote bag listicle. Bespoke synth 90's artisan. Humblebrag af health goth, offal iceland thundercats helvetica bushwick etsy before they sold out flexitarian tacos echo park jianbing. Intelligentsia raw denim bitters letterpress cliche.</p>
-      
+      <p>Ugh celiac iceland yr locavore. Craft beer offal lumbersexual, air plant woke truffaut hammock deep v umami cardigan tote bag listicle. Bespoke synth 90's artisan. Humblebrag af health goth, offal iceland thundercats helvetica bushwick etsy before they sold out flexitarian tacos echo park jianbing. Intelligentsia raw denim bitters letterpress cliche.</p> 
     </div>
-
   </div>
-  
-</div>  </div>
+</div>  
+<Footer />
+</div>
 </template>
 
 <script>
+import Footer from "../../layouts/Footer.vue";
 export default {
-    name: "UserDetails"
+    name: "UserDetails",
+    components: { Footer }
 }
 </script>
 

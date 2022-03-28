@@ -12,18 +12,20 @@
     </div>
   </div>
 </div>
+<Footer />
 </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import Footer from "../../layouts/Footer.vue";
 import ProductCard from "../../components/products/ProductCard";
 import Base from "../../layouts/Base.vue";
 export default {
   computed: {
     ...mapGetters("product", ["products"]),
   },
-  components: { ProductCard, Base },
+  components: { ProductCard, Base, Footer },
   methods: {
     ...mapActions("product", ["getProducts", "addCart", "removeCart"]),
   },

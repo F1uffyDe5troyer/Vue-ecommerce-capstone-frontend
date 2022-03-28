@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="container" style="padding: 30px">
     <div class="row d-flex justify-content-center">
       <div class="list-group col-8">
@@ -42,12 +43,16 @@
       </div>
     </div>
   </div>
+  <Footer />
+</div>
 </template>
 
 <script>
+import Footer from "../../layouts/Footer.vue"
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Cart",
+  components: { Footer },
   data() {
     return {
       totalPrice: 0,

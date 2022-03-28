@@ -22,12 +22,15 @@
     </form>
   </div>
 </body>
+<Footer />
   </div>
 </template>
 
 <script>
+import Footer from "../../layouts/Footer.vue"
 export default {
-    name: "Contact"
+    name: "Contact",
+    components: { Footer }
 }
 </script>
 
