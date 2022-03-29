@@ -1,7 +1,7 @@
 <template>
 <div>
   <div>
-    <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
+    <router-link type="submit" class="btn btn-primary btn-block" to="Products">Products</router-link>
     <div class="container" style="padding-top: 10%">
       <div class="row d-flex justify-content-center">
         <div class="col-5 text-left login-form-container">
@@ -33,10 +33,6 @@
               v-model="password"
               />
             </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
             <button @click="login()" type="submit" class="btn btn-primary btn-block">Login</button>
             <small
                 id="emailHelp"
@@ -63,11 +59,11 @@ export default {
     return {
       email: "",
       password: "",
+      isAdmin: false,
     };
   },
   methods: {
-    ...mapActions("account", ["Login"]),
-    login() {
+login() {
       fetch("https://dalarno-capstone-final-project.herokuapp.com/users/login", {
         method: "POST",
         body: JSON.stringify({
@@ -80,24 +76,18 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          if (json.jwt) {
-            console.log("JSON", json);
+          if(json.jwt){
             localStorage.setItem("jwt", json.jwt);
-            localStorage.setItem("user", JSON.stringify(json.user));
-            // localStorage.setItem("isAdmin", JSON.stringify(json.user.isAdmin));
-            // console.log(json.user)
-            this.$emit("login");
           }
-          if (localStorage.getItem("jwt")) {
-            this.$router.push({ name: "Products" });
-          } else {
-            alert("Incorrect credentials");
+          else{
+            alert("Incorrect Credentials");
           }
         })
         .catch((err) => {
           alert(err);
         });
     },
+    ...mapActions("account", ["login"]),
   },
 };
 </script>

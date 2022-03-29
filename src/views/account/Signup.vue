@@ -1,6 +1,6 @@
 <template>
   <div>
-  <button @click="goToPrevious()" type="submit" class="btn btn-primary btn-block">Home</button>
+  <router-link type="submit" class="btn btn-primary btn-block" to="Products">Products</router-link>
     <div class="container" style="padding-top: 10%">
       <div class="row d-flex justify-content-center">
         <div class="col-5 text-left login-form-container">
@@ -51,7 +51,7 @@
                 id="emailHelp"
                 class="form-text text-muted"
               >Already have an account?</small>
-            <router-link type="submit" class="btn btn-primary btn-block" to="Ly7ogin">Login?</router-link>
+            <router-link type="submit" class="btn btn-primary btn-block" to="Login">Login?</router-link>
           </div>
         </form>
         </div>
@@ -76,7 +76,6 @@ export default {
   },
   methods: {
       register() {
-      console.log("Registered Successfully");
       const person = {
         name: this.name,
         email: this.email,
@@ -97,6 +96,8 @@ export default {
           console.log(json);
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
+          console.log("Registered Successfully");
+
           // this.$router.push({ name: "Login" });
         })
         .catch((err) => {
