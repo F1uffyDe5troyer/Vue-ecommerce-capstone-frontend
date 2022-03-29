@@ -8,6 +8,7 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" width="150" alt="">
           </div>
+        <form @submit.prevent="login">
           <div>
            <div class="form-group form-validation">
               <label for="exampleInputEmail1">Email address</label>
@@ -16,6 +17,7 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                v-model="email"
               />
               <small
                 id="emailHelp"
@@ -24,7 +26,11 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1"
+              <input 
+              type="password" 
+              class="form-control" 
+              id="exampleInputPassword1"
+              v-model="password"
               />
             </div>
             <div class="form-group form-check">
@@ -36,8 +42,9 @@
                 id="emailHelp"
                 class="form-text text-muted"
               >Don't have an account?</small>
-            <button @click="Signup()" type="submit" class="btn btn-primary btn-block" to="/Signup">Signup?</button>
+            <router-link type="submit" class="btn btn-primary btn-block" to="/Signup">Signup?</router-link>
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -52,14 +59,45 @@ import Footer from "../../layouts/Footer.vue"
 export default {
   name: "Login",
   components: { Footer },
+    data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
   methods: {
-    ...mapActions("account", ["login"]),
-       Signup(){
-   this.$router.push('/Signup'); 
-      },
-        goToPrevious(){
-      this.$router.push('/Products')
-    }
+    ...mapActions("account", ["Login"]),
+    login() {
+      fetch("https://dalarno-capstone-final-project.herokuapp.com/users/login", {
+        method: "POST",
+        body: JSON.stringify({
+          email: this.email,
+          password: this.password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          if (json.jwt) {
+            console.log("JSON", json);
+            localStorage.setItem("jwt", json.jwt);
+            localStorage.setItem("user", JSON.stringify(json.user));
+            // localStorage.setItem("isAdmin", JSON.stringify(json.user.isAdmin));
+            // console.log(json.user)
+            this.$emit("login");
+          }
+          if (localStorage.getItem("jwt")) {
+            this.$router.push({ name: "Products" });
+          } else {
+            alert("Incorrect credentials");
+          }
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    },
   },
 };
 </script>

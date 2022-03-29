@@ -19,7 +19,7 @@ const routes = [
     ]
   },
   {
-    path: '/login',
+    path: '/Login',
     component: () => import('../views/account/Login.vue')
   },
   {

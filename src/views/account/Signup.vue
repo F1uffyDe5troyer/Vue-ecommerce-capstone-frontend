@@ -7,7 +7,22 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" width="150" alt="">
           </div>
+        <form @submit.prevent="register">
           <div>
+            <div class="form-group">
+              <label for="exampleInputName">Name</label>
+              <input
+                type="name"
+                class="form-control"
+                id="exampleInputName1"
+                aria-describedby="nameHelp"
+                v-model="name"
+              />
+              <small
+                id="nameHelp"
+                class="form-text text-muted"
+              >Who's you?</small>
+            </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input
@@ -15,6 +30,7 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                v-model="email"
               />
               <small
                 id="emailHelp"
@@ -23,19 +39,21 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" />
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <input 
+              type="password" 
+              class="form-control" 
+              id="exampleInputPassword1" 
+              v-model="password"
+              />
             </div>
             <button @click="login()" type="submit" class="btn btn-primary btn-block">signup</button>
             <small
                 id="emailHelp"
                 class="form-text text-muted"
               >Already have an account?</small>
-            <button @click="Signin()" type="submit" class="btn btn-primary btn-block">Login?</button>
+            <router-link type="submit" class="btn btn-primary btn-block" to="Ly7ogin">Login?</router-link>
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -48,15 +66,46 @@ import Footer from '../../layouts/Footer.vue'
 export default {
   name: "Signup",
   components: { Footer },
+  data() {
+    return {
+      name: "",
+      email: "",
+      password: "",
+      // isAdmin: false,
+    };
+  },
   methods: {
-             Signin(){
-   this.$router.push('/Login'); 
-      },
-    goToPrevious(){
-      this.$router.push('/Products')
-    }
+      register() {
+      console.log("Registered Successfully");
+      const person = {
+        name: this.name,
+        email: this.email,
+        password: this.password,
+      };
+
+      console.log(person);
+      fetch("https://dalarno-capstone-final-project.herokuapp.com/users", {
+        method: "POST",
+        body: JSON.stringify(person),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        // mode: "no-cors"
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          alert("User registered");
+          localStorage.setItem("jwt", json.jwt);
+          // this.$router.push({ name: "Login" });
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    },
   },
 };
+
 </script>
 
 <style>
